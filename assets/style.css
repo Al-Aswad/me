@@ -465,6 +465,13 @@ section .title::after {
 }
 
 
+/* style kontak */
+.contatc .title::after {
+    content: "Kontak";
+}
+
+
+
 
 
 
