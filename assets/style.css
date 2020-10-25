@@ -156,7 +156,8 @@ section {
 
 .about .about-content,
 .services .serv-content,
-.skills .skills-content {
+.skills .skills-content,
+.contatc .contatc-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -466,9 +467,126 @@ section .title::after {
 
 
 /* style kontak */
+
 .contatc .title::after {
-    content: "Kontak";
+    content: "Get In Touch";
 }
+
+.contatc .contatc-content .column {
+    width: calc(50% - 30px);
+}
+
+.contatc .contatc-content .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: Poppins, sans-serif;
+}
+
+.contatc .contatc-content .left p {
+    text-align: justify;
+}
+
+.contatc .contatc-content .left .icons {
+    margin: 10px 0;
+}
+
+.contatc .contatc-content .left .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contatc .contatc-content .left .info {
+    margin-left: 30px;
+}
+
+.contatc .contatc-content .row i {
+    font-size: 25px;
+    color: crimson;
+}
+
+.contatc .contatc-content .info .head {
+    font-weight: 600;
+}
+
+.contatc .contatc-content .info .sub-title {
+    color: #333;
+}
+
+.contatc .right form .fields {
+    display: flex;
+}
+
+.contatc .right form .name {
+    margin-right: 10px;
+}
+
+.contatc .right form .textarea {
+    height: 100px;
+    width: 100%;
+}
+
+
+.contatc .right form .field,
+.contatc .right form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contatc .right form .field input,
+.contatc .right form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: Poppins, sans-serif;
+}
+
+.contatc .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
+    height: 80px;
+}
+
+.contatc .right form .button {
+    height: 47px;
+    width: 147px;
+}
+
+.contatc .right form .button button {
+    height: 100%;
+    width: 100%;
+    border: 2px solid crimson;
+    background: crimson;
+    color: #fff;
+    margin-top: 30px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0, 3 ease;
+}
+
+.contatc .right form .button:hover button {
+    color: crimson;
+    background: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -568,7 +686,8 @@ section .title::after {
         margin-bottom: 20px;
     }
 
-    .skills .skills-content .column {
+    .skills .skills-content .column,
+    .contatc .contatc-content .column {
         width: 100%;
         margin-bottom: 35px;
     }
