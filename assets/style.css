@@ -164,6 +164,26 @@ html {
     display: none;
 }
 
+.btn-wa {
+    position: fixed;
+    z-index: 999;
+    height: 100vh;
+    display: flex;
+    right: 30px;
+    font-size: 27px;
+    flex-direction: column;
+    opacity: 0;
+    justify-content: center;
+}
+
+.btn-wa i {
+    font-size: 50px;
+    width: 45px;
+    display: block;
+    color: green;
+
+}
+
 .scroll-up-btn {
     position: fixed;
     height: 45px;
@@ -833,6 +853,11 @@ footer span a:hover {
         margin-bottom: 35px;
     }
 
+    .btn-wa {
+        opacity: 1;
+        justify-content: end;
+        bottom: 15vh;
+    }
 
 }
 
@@ -840,6 +865,8 @@ footer span a:hover {
     .max-width {
         padding: 0 23px;
     }
+
+
 
     .home .home-content .text-2 {
         font-size: 60px;
