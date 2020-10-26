@@ -17,6 +17,65 @@ html {
     margin: auto;
 }
 
+/* style sosial media */
+.sosial-media {
+    position: fixed;
+    z-index: 999;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(-255px, 0);
+}
+
+.sosial-media a {
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    display: block;
+    background: rgba(0, 0, 0, 0.4);
+    margin: 5px;
+    padding: 10px;
+    width: 300px;
+    text-align: right;
+    border-radius: 6px;
+    font-family: Ubuntu, sans-serif;
+    transition: all 0.5s ease-in;
+}
+
+.sosial-media i {
+    margin-left: 10px;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.sosial-media a:hover {
+    transform: translate(140px, 0);
+}
+
+.sosial-media a:nth-child(1) i {
+    color: royalblue;
+}
+
+.sosial-media a:nth-child(2) i {
+    color: rgb(240, 22, 22);
+}
+
+.sosial-media a:nth-child(3) i {
+    color: transparent;
+    background-image: linear-gradient(45deg, #ffdf9e, #e56969, #8a49a1);
+    -webkit-background-clip: text;
+    font-weight: 600;
+}
+
+.sosial-media a:nth-child(4) i {
+    color: #4ecce8;
+}
+
+
+
+
 /* navbar style */
 .navbar {
     position: fixed;
@@ -26,18 +85,17 @@ html {
     /* background: crimson; */
     font-family: Ubuntu, sans-serif;
     transition: all 0.3s ease;
-    border-bottom: 1px solid #fff;
+    box-shadow: 0 -1px rgba(255, 255, 255, 0.25) inset;
 }
 
 .navbar:hover {
-    background: crimson;
+    /* background: crimson; */
 }
 
 .navbar.sticky {
     padding: 15px 0;
-    background: crimson;
-
-
+    background: #fff;
+    box-shadow: 0 -1px rgba(187, 187, 187, 0.25) inset;
 }
 
 .navbar .max-width {
@@ -58,7 +116,7 @@ html {
 }
 
 .navbar.sticky .logo a span {
-    color: #fff;
+    color: #111;
 }
 
 .navbar .menu li {
@@ -66,12 +124,14 @@ html {
     display: inline-block;
 }
 
+
 .navbar .menu li a {
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
     transition: 0.3s ease;
+    display: block;
 }
 
 .navbar .menu li a:hover {
@@ -80,7 +140,19 @@ html {
 }
 
 .navbar.sticky .menu li a {
-    color: #fff;
+    color: #111;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #111;
+}
+
+.navbar.sticky span {
+    color: #111;
+}
+
+.navbar.sticky a {
+    color: crimson;
 }
 
 /* menu-btn style */
@@ -122,7 +194,7 @@ html {
 
 .home {
     display: flex;
-    background: url("images/bg.jpg") no-repeat fixed center;
+    background: url("images/black-background.jpg") no-repeat fixed center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -138,7 +210,7 @@ html {
 }
 
 .home .home-content .text-2 {
-    font-size: 75px;
+    font-size: 35px;
     font-weight: 600;
     margin-left: -3px;
 }
@@ -497,6 +569,7 @@ section .title::after {
 }
 
 
+
 /* style kontak */
 
 .contatc .title::after {
@@ -522,13 +595,13 @@ section .title::after {
     margin: 10px 0;
 }
 
-.contatc .contatc-content .left .row {
+.contatc .contatc-content .row {
     display: flex;
     height: 65px;
     align-items: center;
 }
 
-.contatc .contatc-content .left .info {
+.contatc .contatc-content .row .info {
     margin-left: 30px;
 }
 
@@ -538,15 +611,17 @@ section .title::after {
 }
 
 .contatc .contatc-content .info .head {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .contatc .contatc-content .info .sub-title {
     color: #333;
 }
 
+/* kanan form */
 .contatc .right form .fields {
     display: flex;
+    padding-top: 30px;
 }
 
 .contatc .right form .name {
@@ -555,9 +630,8 @@ section .title::after {
 
 .contatc .right form .textarea {
     height: 100px;
-    width: 100%;
+    width: 80%;
 }
-
 
 .contatc .right form .field,
 .contatc .right form .fields .field {
@@ -659,16 +733,36 @@ footer span a:hover {
 @media (max-width:991px) {
     .max-width {
         padding: 0 50px;
-        max-width: 800px;
+        max-width: 991px;
     }
 
     .menu-btn {
         display: block;
+        color: #fff;
         z-index: 999;
     }
 
+    .menu-btn.sticky {
+        color: #111;
+    }
+
+
+
     .menu-btn i.active:before {
         content: "\f00d";
+        color: #fff;
+    }
+
+    .navbar.sticky .menu li a {
+        color: rgb(204, 204, 204);
+    }
+
+    .navbar.sticky .menu {
+        padding-top: 40px;
+    }
+
+    .navbar.sticky .menu li a:hover {
+        color: crimson;
     }
 
     .navbar .menu {
@@ -729,7 +823,11 @@ footer span a:hover {
         margin-bottom: 20px;
     }
 
-    .skills .skills-content .column,
+    .skills .skills-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
     .contatc .contatc-content .column {
         width: 100%;
         margin-bottom: 35px;
